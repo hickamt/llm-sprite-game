@@ -9,11 +9,11 @@ YouTube game dev series illustrating the basic concept of sprite animation graph
 ## Set Up
 
 ```bash
-git clone
+git clone https://github.com/hickamt/llm-sprite-game.git
 ```
 
 ```bash
-cd <directory> && npm run install
+cd <directory> && npm install
 ```
 
 ```bash
