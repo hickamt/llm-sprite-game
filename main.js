@@ -65,7 +65,6 @@ const update = (delta) => {
   mainScene.stepEntry(delta, mainScene)
 };
 const draw = () => {
-
   // Clear anything stale
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 

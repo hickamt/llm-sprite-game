@@ -133,6 +133,7 @@ export class Hero extends GameObject {
     // Validating that the next destination is free
     // if (isSpaceFree(walls, nextX, nextY)) {
     if (true) {
+      console.log("Hero is moving to (", nextX, ", ", nextY, ")");
       this.destinationPosition.x = nextX;
       this.destinationPosition.y = nextY;
     }

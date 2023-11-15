@@ -6,6 +6,13 @@ YouTube game dev series illustrating the basic concept of sprite animation graph
 - [Starter Code Kit](https://drive.google.com/file/d/1BLEVGyI5AmMtgz9SG2bI0J3zYi3QjyFh/view?pli=1)
 - [Ending Code Kit](https://drive.google.com/file/d/1Lqkuc92ydqC6WIYAgq4YTU4K27w-1JIv/view)
 
+## Branch Management
+
+Work in your own branch.
+```bash
+# set up and 
+```
+
 ## Set Up
 
 ```bash
