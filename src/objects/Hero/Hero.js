@@ -2,8 +2,8 @@ import {GameObject} from "../../GameObject.js";
 import {Vector2} from "../../Vector2.js";
 import {DOWN, LEFT, RIGHT, UP} from "../../Input.js";
 import {isSpaceFree} from "../../helpers/grid.js";
-// import {walls} from "../../levels/level1.js";
 // import {walls} from "../../levels/greenieVille.js";
+import {walls} from "../../levels/greyStoneCity.js";
 import {Sprite} from "../../Sprite.js";
 import {resources} from "../../Resource.js";
 import {Animations} from "../../Animations.js";
@@ -131,9 +131,10 @@ export class Hero extends GameObject {
     this.facingDirection = input.direction ?? this.facingDirection;
 
     // Validating that the next destination is free
-    // if (isSpaceFree(walls, nextX, nextY)) {
-    if (true) {
-      console.log("Hero is moving to (", nextX, ", ", nextY, ")");
+    if (isSpaceFree(walls, nextX, nextY)) {
+    // if (true) {
+      let wall = `walls.add('${nextX},${nextY}')`
+      console.log(wall);
       this.destinationPosition.x = nextX;
       this.destinationPosition.y = nextY;
     }
