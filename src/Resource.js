@@ -14,8 +14,7 @@ class Resources {
       hero: "/sprites/hero-sheet.png",
       shadow: "/sprites/shadow.png",
       rod: "/sprites/rod.png",
-      botIdle1:
-        "https://forums.rpgmakerweb.com/data/attachments/173/173645-e7d95c9ce307d059d9ea546909f95f92.jpg",
+      abigail: "/sprites/characters/Abigail_Chen.png",
     };
 
     // A bucket to keep all of our images
