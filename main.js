@@ -3,15 +3,15 @@ import { resources } from "./src/Resource.js";
 import { Sprite } from "./src/Sprite.js";
 import { Vector2 } from "./src/Vector2.js";
 import { GameLoop } from "./src/GameLoop.js";
-import { Input } from "./src/Input.js";
 import { gridCells } from "./src/helpers/grid.js";
 import { GameObject } from "./src/GameObject.js";
-import { Hero } from "./src/objects/Hero/Hero.js";
-import { Abigail } from "./src/objects/abagail/Abagail.js";
 import { Camera } from "./src/Camera.js";
 import { Rod } from "./src/objects/Rod/Rod.js";
 import { Inventory } from "./src/objects/Inventory/Inventory.js";
-import { Talking } from "./src/objects/Talking/Talking.js";
+import { Abigail } from "./src/objects/abagail/Abagail.js";
+import { GenAgentInput } from "./src/GenAgentInput.js";
+import { Hero } from "./src/objects/Hero/Hero.js";
+import { Input } from "./src/Input.js";
 
 // Grabbing the canvas to draw to
 const canvas = document.querySelector("#game-canvas");
@@ -49,14 +49,11 @@ mainScene.addChild(camera);
 const rod = new Rod(gridCells(61), gridCells(17));
 mainScene.addChild(rod);
 
-// Meant to be a new message bubble
-const talking = new Talking(gridCells(65), gridCells(17));
-mainScene.addChild(talking);
-
 const inventory = new Inventory();
 
 // Add an Input class to the main scene
-mainScene.input = new Input();
+// mainScene.input = new Input();
+mainScene.input = new GenAgentInput();
 
 // Establish update and draw loops
 const update = (delta) => {

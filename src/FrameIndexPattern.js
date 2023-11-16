@@ -13,7 +13,7 @@ export class FrameIndexPattern {
 
   get frame() {
     const { frames } = this.animationConfig;
-    for (let i = frames.length - 1; i >= 0; i--) {
+    for (let i = frames.length - 1; i >= 0; --i) {
       if (this.currentTime >= frames[i].time) {
         return frames[i].frame;
       }

@@ -1,5 +1,3 @@
-import { fetchText } from "./fetchAPI/fetchText";
-
 class Resources {
   constructor() {
     // Everything we plan to download
@@ -12,6 +10,7 @@ class Resources {
       // ground: "/sprites/GreyStoneCity.png",
       ground: "/sprites/GreyStoneCityCropped.png",
       hero: "/sprites/hero-sheet.png",
+      // hero: "/sprites/characters/Abigail_Chen.png",
       shadow: "/sprites/shadow.png",
       rod: "/sprites/rod.png",
       abigail: "/sprites/characters/Abigail_Chen.png",

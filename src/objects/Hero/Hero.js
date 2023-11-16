@@ -2,7 +2,6 @@ import {GameObject} from "../../GameObject.js";
 import {Vector2} from "../../Vector2.js";
 import {DOWN, LEFT, RIGHT, UP} from "../../Input.js";
 import {isSpaceFree} from "../../helpers/grid.js";
-// import {walls} from "../../levels/greenieVille.js";
 import {walls} from "../../levels/greyStoneCity.js";
 import {Sprite} from "../../Sprite.js";
 import {resources} from "../../Resource.js";
