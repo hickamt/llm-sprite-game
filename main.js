@@ -40,7 +40,7 @@ mainScene.addChild(groundSprite);
 const hero = new Hero(gridCells(30), gridCells(20));
 mainScene.addChild(hero);
 
-const abigail = new Abigail(gridCells(32), gridCells(18));
+const abigail = new Abigail(gridCells(29), gridCells(20));
 mainScene.addChild(abigail);
 
 const camera = new Camera();
@@ -52,11 +52,14 @@ mainScene.addChild(rod);
 const inventory = new Inventory();
 
 // Add an Input class to the main scene
-// mainScene.input = new Input();
-mainScene.input = new GenAgentInput();
+mainScene.input = new Input();
+mainScene.genAgentInput = new GenAgentInput();
 
 // Establish update and draw loops
+// delta is the time since the last frame
 const update = (delta) => {
+  hero.input = mainScene.heroInput;
+  abigail.genAgentInput = mainScene.GenAgentInput;
   mainScene.stepEntry(delta, mainScene);
 };
 const draw = () => {

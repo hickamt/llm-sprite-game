@@ -1,3 +1,9 @@
+/** Gen Agent Animations:
+ *  See the sprite resources for all characters
+ *  that work with these animations in /public/sprites/characters
+ *  All sprite sheets of the same pixel size and are 3 columns wide
+ *  by 4 rows tall should work if the animation directions are the same
+*/
 const makeStandingFrames = (rootFrame = 0) => {
   return {
     duration: 400,

@@ -61,7 +61,8 @@ export class Abigail extends GameObject {
     this.itemPickupTime = 0;
     this.itemPickupShell = null;
 
-    // React to picking up an item
+    // Leaving this as Abagail might use an on event to
+    // begin a conversation or pick something up
     events.on("ABAGAIL_PICKS_UP_ITEM", this, (data) => {
       this.onPickUpItem(data);
     });
@@ -69,30 +70,18 @@ export class Abigail extends GameObject {
 
   step(delta, root) {
     // Lock movement if celebrating an item pickup
-    if (this.itemPickupTime > 0) {
-      this.workOnItemPickup(delta);
-      return;
-    }
+    // if (this.itemPickupTime > 0) {
+    //   this.workOnItemPickup(delta);
+    //   return;
+    // }
 
     const distance = moveTowards(this, this.destinationPosition, 1);
     const hasArrived = distance <= 1;
-    // Attempt to move again if the  is at his position
+    // Attempt to move again if the gen agent is at destination
     if (hasArrived) {
       this.tryMove(root);
     }
-
-    // this.tryEmitPosition();
   }
-
-  // tryEmitPosition() {
-  //   if (this.lastX === this.position.x && this.lastY === this.position.y) {
-  //     return;
-  //   }
-  //   this.lastX = this.position.x;
-  //   this.lastY = this.position.y;
-  //   // Change the name in /Camera constructor if you change this
-  //   events.emit("ABAGAIL_POSITION", this.position);
-  // }
 
   tryMove(root) {
     const { input } = root;

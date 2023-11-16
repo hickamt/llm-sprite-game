@@ -1,5 +1,5 @@
-import {Vector2} from "./Vector2.js";
-import {events} from "./Events.js";
+import { Vector2 } from "./Vector2.js";
+import { events } from "./Events.js";
 
 export class GameObject {
   constructor({ position }) {
@@ -52,10 +52,10 @@ export class GameObject {
 
   // Remove from the tree
   destroy() {
-    this.children.forEach(child => {
+    this.children.forEach((child) => {
       child.destroy();
-    })
-    this.parent.removeChild(this)
+    });
+    this.parent.removeChild(this);
   }
 
   /* Other Game Objects are nestable inside this one */
@@ -66,8 +66,8 @@ export class GameObject {
 
   removeChild(gameObject) {
     events.unsubscribe(gameObject);
-    this.children = this.children.filter(g => {
+    this.children = this.children.filter((g) => {
       return gameObject !== g;
-    })
+    });
   }
 }
